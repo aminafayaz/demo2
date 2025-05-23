@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet } from 'react-native';
 import AntDesign from "@expo/vector-icons/AntDesign";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import { Link } from 'expo-router';
 
 export default function Tab() {
   return (
@@ -17,6 +18,7 @@ export default function Tab() {
       <View style={styles.align}>
         <AntDesign name="infocirlce" size={24} color="red" />
         <MaterialIcons name="double-arrow" size={24} color="red" />
+        <Link href={"/(tabs)/param"}>Param</Link>
       </View>
     </View>
   );
