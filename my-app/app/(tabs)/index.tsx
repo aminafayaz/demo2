@@ -2,8 +2,15 @@ import { View, Text, StyleSheet } from 'react-native';
 import AntDesign from "@expo/vector-icons/AntDesign";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { Link } from 'expo-router';
+<<<<<<< Updated upstream
+=======
+import { Button } from '@react-navigation/elements';
+import { useRouter } from 'expo-router';
+>>>>>>> Stashed changes
 
 export default function Tab() {
+    const router = useRouter();
+
   return (
     <View
       style={[
@@ -15,11 +22,18 @@ export default function Tab() {
       ]}
     >
       <Text style={styles.innertext}>LoRaWAN Kerala</Text>
-      <View style={styles.align}>
+      <View style={[styles.align,styles.justify]}>
         <AntDesign name="infocirlce" size={24} color="red" />
+<<<<<<< Updated upstream
         <MaterialIcons name="double-arrow" size={24} color="red" />
         <Link href={"/(tabs)/param"}>Param</Link>
+=======
+        <MaterialIcons name="double-arrow" size={24} color="red" onPress={()=> router.navigate('/parameterPage')}/>
+              {/* <Link href="/parameterPage">About</Link> */}
+
+>>>>>>> Stashed changes
       </View>
+      {/* <Button onPress={() => router.navigate('/parameterPage')}>Go to About</Button> */}
     </View>
   );
 }
@@ -54,5 +68,8 @@ const styles = StyleSheet.create({
   },
   justify: {
     justifyContent: "space-around",
+  },
+  justify1: {
+    justifyContent: "space-evenly",
   },
 });
