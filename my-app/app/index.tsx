@@ -5,24 +5,15 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 export default function Index() {
   return (
-<<<<<<< Updated upstream
-    <View style={styles.border}>
+    <View style={[styles.align,styles.border, styles.mar, styles.pad,styles.justify]}>
 
       <Text style = {styles.innertext}>LoRaWAN Kerala</Text>
-      <View>
-        <AntDesign name="infocirlce" size={24} color="red" />
+      <View style = {styles.align}>
+   <AntDesign name="infocirlce" size={24} color="red" />
         <MaterialIcons name="double-arrow" size={24} color="red" />
-=======
-    <View style={[styles.align,styles.border, styles.mar, styles.pad,styles.justify]}>
-      <View style={[styles.align]}>
-        <Text style = {styles.innertext}>LoRaWAN Kerala</Text>
       </View>
-      <View style={{alignItems: 'flex-end', flexDirection: 'column'}}>
-        <Text style = {styles.innertext}>Ker</Text>
-
->>>>>>> Stashed changes
       </View>
-    </View>
+    
   );
 }
 // style={{
@@ -36,7 +27,7 @@ const styles = StyleSheet.create({
   innertext :{
     fontSize :25,
     fontWeight :'bold',
-    color: 'blue',
+    color: 'red',
     textAlign: 'center'
   },
    border: {
